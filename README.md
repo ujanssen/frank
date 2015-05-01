@@ -1,6 +1,6 @@
 # frank
 
-A playgrund for learning saltstack/salt
+A playground for learning saltstack/salt
 
 - install salt-minion:
 
