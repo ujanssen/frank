@@ -1,0 +1,3 @@
+users:
+  consul:
+    fullname: consul
