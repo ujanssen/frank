@@ -3,3 +3,9 @@ consul:
     - present
     - fullname: consul
 
+  file:
+    - managed
+    - name: /usr/local/bin/consul
+    - source: salt://consul/consul
+    - mode: 0744
+
