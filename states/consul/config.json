@@ -1,0 +1,19 @@
+{
+    "server": false,
+    "datacenter": "home",
+    "data_dir": "/var/consul",
+    "ui_dir": "/home/consul/dist",
+    "encrypt": "RbsNvLZNV3bUX5pw8hmAjA==",
+    "log_level": "INFO",
+    "enable_syslog": true,
+    "start_join": ["192.168.12.42", "192.168.12.41", "192.168.12.49"],
+    "service": {
+        "name": "web server",
+        "port": 80,
+        "tags": ["nginx", "demonstration"],
+        "check": {
+            "script": "curl localhost:80 > /dev/null 2>&1",
+            "interval": "10s"
+        }
+    }
+}
