@@ -16,6 +16,7 @@ consul:
 /etc/consul.d/client/config.json:
   file:
     - managed
+    - template: jinja
     - source: salt://consul/config.json
 
 /etc/init/consul.conf:
