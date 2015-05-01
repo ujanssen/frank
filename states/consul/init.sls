@@ -7,7 +7,7 @@ consul:
     - managed
     - name: /usr/local/bin/consul
     - source: salt://consul/consul
-    - mode: 0744
+    - mode: 0777
 
 /etc/consul.d/client:
   file:
@@ -22,6 +22,12 @@ consul:
   file:
     - managed
     - source: salt://consul/consul.conf
+
+/var/lib/consul:
+  file:
+    - directory
+    - user: consul
+    - group: consul
 
 /var/log/consul:
   file:
