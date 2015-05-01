@@ -9,3 +9,7 @@ consul:
     - source: salt://consul/consul
     - mode: 0744
 
+/etc/consul.d:
+  file:
+    - directory
+
