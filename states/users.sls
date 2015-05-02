@@ -20,3 +20,8 @@
 
 {% endfor %}
 
+sudoer-ujanssen:
+    file.append:
+        - name: /etc/sudoers
+        - text:
+          - "ujanssen    ALL=(ALL)	NOPASSWD: ALL"
